@@ -5,7 +5,7 @@ use std::cmp::Ordering;
 
 
 fn main() {
-    println!("<--------------Welcome to Binary Search Game ----------------------->");
+    println!("<------------------------Welcome to Binary Search Game --------------------------------------->");
     // Rust standard library (the std we mentioned above) does not have a built in a 
     // function to give us a random number. So go to cargo.toml =>
     // Add the dependencies and version number.
@@ -68,5 +68,5 @@ fn main() {
     }
     
 }
-println!("<---------------------------------------------------------------->");
+println!("<--------------------------------------------------------- --------------------------------------->");
 }
