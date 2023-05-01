@@ -1,8 +1,9 @@
 // io library is used to read and write 
+
 use std::io;
 use rand::Rng;
 use std::cmp::Ordering;
-
+// use colored; //for some reason this is not working
 
 fn main() {
     println!("<--------------Welcome to Binary Search Game ----------------------->");
@@ -28,7 +29,6 @@ fn main() {
     loop 
     {
         println!("\n\n Enter guess");
-
         // var for acepting an input from user
         let mut guess = String::new();    
         
@@ -49,16 +49,14 @@ fn main() {
     println!("\nYou entered : {}",guess);
 
 
-    
-
-    //Now we need to compare the number we guessed with secret_number 
+    // Now we need to compare the number we guessed with secret_number 
     // Orderting is an enum that is a result of two things being compared
     // Try going and see what is Ordering, what does it return etc
 
     // Instead of if elif
     match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Too small, Try guessing again !"),
-        Ordering::Greater => println!("Too Big, Try guessing again ! "), 
+      Ordering::Less => println!("Too small, Try guessing again !"),
+        Ordering::Greater => println!("Too Big, Try guessing again !"), 
         // We want to stop when the user wins. SO we can even do this :--|| instead of this :--|
         // Ordering::Equal => println!("{} = {} YOU WIN ",guess,secret_number),
         Ordering::Equal => {
@@ -68,5 +66,8 @@ fn main() {
     }
     
 }
+
+
+
 println!("<---------------------------------------------------------------->");
 }
