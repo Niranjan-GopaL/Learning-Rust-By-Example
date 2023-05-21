@@ -9,6 +9,7 @@ fn main() {
     // Trim whitespace and convert to the desired type
     let value: i32 = input.trim().parse().expect("Invalid input");
 
+    println!("{}", value);
     // This won't compile cuz compiler things enigma could be 
     //uninitialised since it is in an if statement
     // let enigma1:u8;
@@ -26,4 +27,12 @@ fn main() {
         enigma2 = 7;
     }
     println!("{}",enigma2);
+
+    // use {:?} to print tuples or {:#?} to print it in a pretty way
+    let t = (1,2,3,4,5);
+
+    println!("{:?}",t);
+    println!("{:#?}",t);
+
+    // t.0 t.1 t.2 etc
 }

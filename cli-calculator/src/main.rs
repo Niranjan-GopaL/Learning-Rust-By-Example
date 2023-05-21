@@ -1,4 +1,4 @@
-io library is used to read and write 
+// io library is used to read and write 
 
 use std::io;
 use rand::Rng;
