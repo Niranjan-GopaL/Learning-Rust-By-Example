@@ -17,9 +17,6 @@ GO TO THIS LINK FOR https://www.youtube.com/watch?v=-Jp7sabBCp4&list=PLJbE2Yu2zu
 
 
 
-
-
-
 RBE (Rust by Example ] --------------------------------------------------------------------------------------------------------------->
 
 CONTENTS :-
@@ -48,6 +45,3 @@ Testing - All sorts of testing in Rust.
 Unsafe Operations
 Compatibility
 Meta - Documentation, Benchmarking.
-
-
-
