@@ -1,3 +1,6 @@
+- JUST HOVER OVER THE TOKENS TO UNDERSTAND WHAT IT IS.
+
+
 - we need an external crate (carate : VERY SMALL PACKAGES)
 
 RUST's way
@@ -12,7 +15,3 @@ really big packages just to use one of its fn
 
 flate2 :- https://docs.rs/flate2/latest/flate2/  
 
-
-
-
-let mut input = BufReader::new(File::open(args().nth(1).unwrap()).unwrap());
