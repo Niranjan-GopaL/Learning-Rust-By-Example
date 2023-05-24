@@ -1,0 +1,13 @@
+- we need an external crate (VERY SMALL PACKAGES)
+
+RUST's way
+
+            crates 
+            packages
+
+( and just like in npm u'll need to install this external crate }"package essentially"{ )
+THIS IS SOO AWESOME cuz rust wont have to install 
+really big packages just to use one of its fn
+
+
+flate2 :- https://docs.rs/flate2/latest/flate2/  

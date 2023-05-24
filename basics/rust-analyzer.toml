@@ -1,0 +1,3 @@
+[ra]
+# Specify the root directory for Rust Analyzer to analyze.
+root = "/src/main.rs"
