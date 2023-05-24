@@ -1,0 +1,10 @@
+WORKING WITH JSON ------------------------------------------------------------------
+
+
+- NODE WAS HEAVEN (since js has native json support)
+- GO (we use Marshaling and Unmarshaling)
+- Rust (Serialize and Deserialize )
+
+
+"Internet understands JSON and rust understands structs"
+

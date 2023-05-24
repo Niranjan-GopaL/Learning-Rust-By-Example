@@ -5,7 +5,7 @@ use std::io;
 
 
 
-pub fn basic1() {
+pub fn lesson_0() {
     // Accept a value from the user
     println!("Enter a value:");
     let mut input = String::new();
@@ -51,15 +51,16 @@ pub fn basic1() {
 
     // t.0 t.1 t.2 etc
 
+    add(1, 2);
 
     
     /* Multi line comments
 
      */
 
-
-    
-
-
-    
 }   
+
+
+fn add(a:i32,b:i32) -> i32 {
+    a + b
+}
