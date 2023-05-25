@@ -52,7 +52,7 @@ fn activity() {
 
 
     // TUPLES ARE USEFUL WHEN SMALL DATA PROP ARE CONCEREND
-    // OR 
+    let _inlay_hints_for_string_are_wierd =  "Press ctrl+alt to see the in lay hints in vs code by rust analyzer";
 }
 
 fn main() {
