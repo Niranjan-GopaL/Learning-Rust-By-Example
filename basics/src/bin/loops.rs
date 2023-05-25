@@ -1,4 +1,4 @@
-fn lesson_1() -> i32 {
+fn loops() -> i32 {
 
     let mut a = 0;
     // inf loop
@@ -30,5 +30,5 @@ fn lesson_1() -> i32 {
 }
 
 fn main() {
-    lesson_1();
+    loops();
 }
