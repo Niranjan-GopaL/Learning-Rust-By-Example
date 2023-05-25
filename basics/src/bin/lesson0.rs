@@ -121,3 +121,9 @@ pub fn _clever_way_to_use_conditionals(grade:f32)->char {
     else 
     {'E'}
 }
+
+
+fn main(){
+    lesson_0();
+    _clever_way_to_use_conditionals(94.4);
+}

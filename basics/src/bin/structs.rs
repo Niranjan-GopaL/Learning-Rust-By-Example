@@ -6,7 +6,5 @@ fn main() {
     struct a{
         
     }
-
     
-
 }

@@ -1,4 +1,4 @@
-pub fn lesson_1() -> i32 {
+fn lesson_1() -> i32 {
     let mut a = 0;
     
     loop{
@@ -23,4 +23,8 @@ pub fn lesson_1() -> i32 {
     println!("{} {}",first_name(),last_name());
 
     return 0
+}
+
+fn main() {
+    lesson_1();
 }
