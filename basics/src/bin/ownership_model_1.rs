@@ -25,7 +25,7 @@ fn get_theme(theme: Theme) {  // <--------- [[4]] get_theme() function gets the 
 } // <------------- [[5]] get_Theme DELETES theme (my_theme) therefore that variable no longer exists
 
 
-fn main () {
+fn _main_ () {
     let my_theme = Theme::_CutomisedForMe; // <----- [[2]] my_theme is owned my main fn
     let _x = 1;                           // <-----       _x is also owned by main fn   
     let _color = "purple";
@@ -34,6 +34,14 @@ fn main () {
 
     
 } // <--------- [[7]]  all the data that function main owns IS DESTROYED
+
+
+
+
+
+
+
+
 
 
 
@@ -67,7 +75,7 @@ fn _get_theme_solution(theme: &Theme) {  // <--------- [[4]] _get_theme_solution
 
 // remove the underscore here and add the underscore in the other main 
 // HOW TO SWITCH BETWEEN THE ENTRY POINT TO A PROGRAM !!!!
-fn _main_ () {
+fn main () {
     let my_theme = Theme::_CutomisedForMe; // <----- [[2]] my_theme is owned my main fn
     let _x = 1;                           // <-----       _x is also owned by main fn   
     let _color = "purple";
