@@ -10,13 +10,15 @@ mod lesson0;
 // mod lesson9;
 
 
-use lesson0::lesson_0 as lesson_0_aliased_name_lol;
+use lesson0::{lesson_0,_maximum_of_three} ;
 // use lesson1::lesson_1 as lesson_1_aliased_name_lol;
 
 
 fn main() {
     println!("Hello, world!");
-    lesson_0_aliased_name_lol();
+    lesson_0();
+    _maximum_of_three(1,2,3);
+    println!("{}",_maximum_of_three(1,2,3));
     // lesson_1_aliased_name_lol();
     // lesson_2_aliased_name_lol();
     // lesson_3_aliased_name_lol();

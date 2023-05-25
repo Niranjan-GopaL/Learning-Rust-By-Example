@@ -61,6 +61,30 @@ pub fn lesson_0() {
 }   
 
 
-fn add(a:i32,b:i32) -> i32 {
+pub fn add(a:i32,b:i32) -> i32 {
     a + b
+}
+
+
+pub fn _maximum_of_three(a:i32,b:i32,c:i32) -> i32 {
+    if a>b
+        {
+        if a>c
+        {
+            return a;
+        }else{
+            return c;
+        }
+    }else{
+        if b>c
+        {
+            return b;
+        }else{
+            return c;
+        }
+    }
+}
+
+pub fn _maximum_of_three__2(a:i32,b:i32,c:i32) -> i32 {
+    321
 }
