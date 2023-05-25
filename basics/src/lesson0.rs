@@ -85,6 +85,24 @@ pub fn _maximum_of_three(a:i32,b:i32,c:i32) -> i32 {
     }
 }
 
-pub fn _maximum_of_three__2(a:i32,b:i32,c:i32) -> i32 {
-    321
-}
+
+
+// No idea why this can't work
+
+// error :- 
+
+// if` may be missing an `else` clause
+// `if` expressions without `else` evaluate to `()`
+// consider adding an `else` block that evaluates to the expected type
+
+// pub fn _maximum_of_three__2(a:i32,b:i32,c:i32) -> i32 {
+//     if a > b && a > c {
+//         return a
+//     }
+//     if b > a && b > c {
+//         return b
+//     }
+//     if c > a && c > b {
+//         return c
+//     }
+// }
