@@ -106,3 +106,18 @@ pub fn _maximum_of_three(a:i32,b:i32,c:i32) -> i32 {
 //         return c
 //     }
 // }
+
+
+// Thanauja ma'am mathode
+pub fn _clever_way_to_use_conditionals(grade:f32)->char {
+    if grade >= 90.0 
+    {'A'}
+    else if grade >= 80.0
+    {'B'} 
+    else if grade >= 70.0
+    {'C'} 
+    else if grade >= 60.0
+    {'D'} 
+    else 
+    {'E'}
+}
