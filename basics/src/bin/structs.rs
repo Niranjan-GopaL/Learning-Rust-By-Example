@@ -1,35 +1,38 @@
 fn activity() {
     enum Flavor {
-        Sweet,
-        Bitter,
+        _Sweet,
+        _Bitter,
         Hot,
-        Chilly,
-        Cold
+        _Chilly,
+        _Cold
     }
 
 
     struct Drink{
         flavor: Flavor,
-        ounce: f64
+        _ounce: f64
     }
 
 
     let drink1 = Drink{
         flavor : Flavor::Hot,
-        ounce: 32.3
+        _ounce: 32.3
     };
 
     fn print_data(drink:Drink) {
-        let mut switch = 1;
+
+        // this is kinda wierd => Initially I wrote "let mut switch = 1" and compiler showed a warning
+        // turns out just "let switch" is enough. MAKES SENSE THOUGH!!!!! damnnn
+        let switch;
 
         let drink_flavor = drink.flavor;
         match drink_flavor {
-            Flavor::Sweet => switch = 0,
-            Flavor::Bitter => switch = 0,
+            Flavor::_Sweet => switch = 0,
+            Flavor::_Bitter => switch = 0,
             Flavor::Hot => switch = 0,
-            Flavor::Chilly => switch = 1,
-            Flavor::Cold => switch = 1
-        }
+            Flavor::_Chilly => switch = 1,
+            Flavor::_Cold => switch = 1
+        };
 
         if switch == 1 
         {
