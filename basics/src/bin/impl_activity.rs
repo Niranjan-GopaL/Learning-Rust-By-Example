@@ -23,6 +23,7 @@ struct ShippingBox {
  */
 
 impl ShippingBox {
+    //  old way
     fn create_shipping_box() -> Self {
         Self {
             height: 25.0,
@@ -33,13 +34,30 @@ impl ShippingBox {
         }
     }
 
+    // if the fieldvalue name is same as the fieldname then we don't need to do repete (JUST LIKE JSON)
+    // deosn't even matter if they are in the correct order
+
+    // fn new(height: f32, length: f32, breadth: f32, weight: f32, color: Color) -> Self {
+    //     Self {
+    //         height: height,
+    //         length: length,
+    //         breadth: breadth,
+    //         weight: weight,
+    //         color: color,
+    //     }
+    // }
+
+
+
+
+    // Shorthand struct initialization
     fn new(height: f32, length: f32, breadth: f32, weight: f32, color: Color) -> Self {
         Self {
-            height: height,
-            length: length,
-            breadth: breadth,
-            weight: weight,
-            color: color,
+            color,
+            height,
+            weight,
+            length,
+            breadth,
         }
     }
 
@@ -59,11 +77,9 @@ impl ShippingBox {
 }
 
 fn main() {
-
     // my old boring way
     let _box = ShippingBox::create_shipping_box();
     _box.print_properties();
-
 
     // my NEW WAYYY THIS IS SOOOO COOOL
     let _box_better = ShippingBox::new(
@@ -71,8 +87,6 @@ fn main() {
         34.5,
         23.4,
         543.333,
-        Color::_Black,
-    );
+        Color::_Black);
     _box_better.print_properties();
-
 }
