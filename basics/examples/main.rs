@@ -6,10 +6,14 @@ fn main() {
     
     NOW WE KNOW!!!!!!
 
+    
+    THIS REALLY HELPED ME 
+    https://users.rust-lang.org/t/hints-work-in-main-rs-but-not-other-files-why/81800/2 
+
     RUST LANG BOOK IS INSANE
     https://doc.rust-lang.org/cargo/guide/project-layout.html
 
-
+    
     .
 ├── Cargo.lock
 ├── Cargo.toml
