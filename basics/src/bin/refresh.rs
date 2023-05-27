@@ -7,10 +7,10 @@ enum Access {
 
 fn main(){
     let access_level = Access::_User;
-    let is_admin = match access_level {
+    let can_admin = match access_level {
         Access::_Admin => true,
         _ => false,
     };
-    println!("{is_admin}");
+    println!("{can_admin}");
 
 }
