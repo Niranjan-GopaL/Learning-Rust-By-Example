@@ -1,9 +1,11 @@
 // ENUMERATION
 fn lesson_2() -> i32 {
-    //  ALL POSSIBLE VARIENTS!!!!!!!!!
+    //  ALL POSSIBLE VARIENTS!!!!!!!!! <------- One way of thinkin
+    // We created a "data-type-like thing", now varibales of specific 
+    // data types belonging to another  broder class of data types can be created
     enum Direction {
-        Up,
-        Down,
+    Up,
+    Down,
         Right,
         Left,
         Front,
@@ -23,6 +25,8 @@ fn lesson_2() -> i32 {
     }
 
     // AT A TIME AN enum can only be ONE of the varient
+
+    // dir1 is of "Direction" data type <---------------- IMPORTANT
     let dir1 = Direction::Up;
     let dir2 = Direction::Down;
     let dir3 = Direction::Right;
