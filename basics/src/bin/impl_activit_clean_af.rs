@@ -1,3 +1,18 @@
+/*   WHY THIS WAY ???
+
+    -  Having all the logic in one place => EXTREMELY BAD
+    -  So BREAK IN TO SMALL PIECES => EACH PIECES WITH IT OWN FUNCTIONALITY.
+
+    - All information about color is in ONE SINGLE PLACE
+    - All information about dimensions is in ONE SINGLE PLACE.
+
+$$$$    So we can make changes in that single places without effecting any  $$$$ 
+$$$$    other part of the code. THIS IS A REALLY IMPORTANT PHILOSOPHY       $$$$            
+
+ */
+
+
+
 // <-------------------------------------- COLOR ENUM IS CREATED HERE --------------------------------
 enum Color {
     _Green,
@@ -56,6 +71,7 @@ impl ShippingBox{
         self._dimensions.print();
         self._color.print();
         println!("{:?}",self._weight);
+        println!()
     }
 }
 // <----------------------------------------------------------------------------------------------------
