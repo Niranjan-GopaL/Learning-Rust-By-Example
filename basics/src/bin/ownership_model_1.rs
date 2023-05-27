@@ -20,7 +20,7 @@ fn _get_theme(theme: Theme) {  // <--------- [[4]] _get_theme() function gets th
         Theme::_CutomisedForMe => {
             println!("I FUCKING LOVE THE CUSTOMISED VERSION i have now");
         },
-        _ => (),
+        _ => (),            
     }
 } // <------------- [[5]] _get_Theme DELETES theme (my_theme) therefore that variable no longer exists
 
