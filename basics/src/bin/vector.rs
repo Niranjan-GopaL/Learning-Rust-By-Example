@@ -16,8 +16,9 @@ fn main(){
     // Vec is a struct (hover over it) that allocates memory on heap
     let mut vector_2 = Vec::new(); // needs TO BE MUTABLE
     vector_2.push(1);
-    vector_2.push(1);
-    vector_2.push(1);
+    vector_2.push(2);
+    vector_2.push(3);
+    vector_2.push(4);
 
     vector_2.pop();
     println!("{:?}",vector_2.len());
