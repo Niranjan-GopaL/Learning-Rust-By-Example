@@ -30,12 +30,12 @@ fn show_temp(temp:Temperature){
 }
 
 fn main(){
-    let hot = Temperature{degree_f: 99.9999};
+    let hot = Temperature{degree_f: 99.9999}; // <--- creating a struct instantce normally
     hot.show_temp();  // <-- impl
     show_temp(hot);   // <-- regular fn
     
     
-    let cold = Temperature::freezing();
+    let cold = Temperature::freezing();  // <--- creating a struct instantce normally
     cold.show_temp();  // <-- impl
     show_temp(cold);   // <-- regular fn
 }
