@@ -25,17 +25,23 @@ impl Temperature{
 }
 
 
-fn show_temp(temp:Temperature){
+
+fn show_temp(temp:&Temperature){
     println!("{:?}", temp.degree_f)
 }
 
 fn main(){
     let hot = Temperature{degree_f: 99.9999}; // <--- creating a struct instantce normally
     hot.show_temp();  // <-- impl
-    show_temp(hot);   // <-- regular fn
+    show_temp(&hot);   // <-- regular fn
     
     
     let cold = Temperature::freezing();  // <--- creating a struct instantce normally
     cold.show_temp();  // <-- impl
-    show_temp(cold);   // <-- regular fn
+    show_temp(&cold);   // <-- regular fn
+
+
+    // both srtuct instaces are available in the main (we only evr let functions and impl borrow)
+    println!("{:?}",hot.degree_f);
+    println!("{:?}",cold.degree_f);
 }
