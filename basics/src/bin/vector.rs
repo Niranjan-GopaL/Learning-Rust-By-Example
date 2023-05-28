@@ -4,9 +4,9 @@
 
 fn main(){
     // Unlike arrays and tuples, vectors allocate memory on heap
-
-
-
+    
+    
+    
     // Basic example
 
     // vec! is a macro (so it expands into actual code during compile time)
