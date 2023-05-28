@@ -62,6 +62,21 @@ fn type_annotation_importance(){
 
     }
 
+    
+    /*                     Generics <---------- 
+    
+    Generics  allow you to write code that can operate on different types 
+    without sacrificing type safety. They enable you to create reusable and 
+    flexible code by abstracting over types.
+
+    With generics, you can define functions, structs, enums, and traits 
+    that can work with different types. Instead of specifying a specific type, 
+    you define placeholders called type parameters. These type parameters are 
+    represented by generic identifiers, such as T, U, or any other valid identifier.
+    
+     */
+
+
 }
 
 fn main(){
