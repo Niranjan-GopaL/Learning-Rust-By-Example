@@ -23,6 +23,12 @@ struct Employee{
 }
 
 
+fn print_employee_data(data: Employee) {
+    println!("{:?}", data.position);
+    println!("{:?}", data.work_hours);
+}
+
+
 
 fn main(){
     let employee_1: Employee = Employee{
@@ -58,7 +64,7 @@ fn main(){
     YAY!!
     println!("{:?}", Position);
 */
-2
+
 
 
 
@@ -70,5 +76,11 @@ fn main(){
     println!("Employee_1_temp has work_hours: {:?} and position: {:?}", 
     employee_1_temp.work_hours,
     employee_1_temp.position);
+
+    // Since you are 
+    print_employee_data(employee_1_temp);
+    print_employee_data(employee_1_temp);
+    print_employee_data(employee_1_temp);
+    print_employee_data(employee_1_temp);
 
 }
