@@ -58,4 +58,11 @@ fn main(){
     // these dont do anything to the entry
 
 
+    // VERY IMPORTANT POINT (WE MIGHT THIS IRLVERY OFTEN)
+    // hm.entry(String::from("blue")).or_insert(10)  <-------- 
+    //                      returns a mutable reference to the value of the entry
+    // so we can dereference and mutate the value
+
+    // The 10 line program hashmaps_use_case.rs does just that
+
 }
