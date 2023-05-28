@@ -63,7 +63,7 @@ fn type_annotation_importance(){
     }
 
     
-    /*                     Generics <---------- 
+    /*                     Generics <---------- Type annotated
     
     Generics  allow you to write code that can operate on different types 
     without sacrificing type safety. They enable you to create reusable and 
