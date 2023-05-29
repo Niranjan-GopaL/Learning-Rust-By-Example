@@ -5,6 +5,18 @@ use std::io::ErrorKind;
 use std::io::Read;
 use std::io;
 
+// For writing one line function
+use std::fs::{self};
+
+
+
+
+
+
+
+
+
+
 // just like how the Option Enum can be either Some or None
 // enum Result<T,E> {
 //     Ok(T),
@@ -97,11 +109,9 @@ fn _read_username_from_file_()->Result<String,io::Error>  {
 
 /// 2 line _read_username_from_file()
 /// Simplified using chaining function calls
-/// 
-/// 
 fn _read_username_from_file__() ->Result<String,io::Error>  {
     let mut s = String::new();
-
+    
     // on looking carefully we understand that we dont really need 
     // a file variable . we can just chain them together
     File::open("username.txt")?.read_to_string(&mut s)?;
@@ -109,7 +119,16 @@ fn _read_username_from_file__() ->Result<String,io::Error>  {
 }
 
 
+// <--------------- 1 LINE VERSION  version -----------------------------
 
+/// We use std::io::fs::{self} for this
+/// fs has a REALLY useful fucntion called :- 
+/// read_to_string()
+fn _read_username_from_file_insane() ->Result<String,io::Error>  {
+    fs::read_to_string("path/to/your/file.txt")
+}   
+
+//<-----------------------  MIC DROP ----------------------------------
 
 
 
