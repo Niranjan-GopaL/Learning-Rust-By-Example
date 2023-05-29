@@ -1,4 +1,4 @@
-//! Generics intro
+//! Generics are just a special way to define function.
 //! there will be certain levels [[1]] and [[2]] [[3]]
 
 #![allow(dead_code)]
