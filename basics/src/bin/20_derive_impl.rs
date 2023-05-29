@@ -1,5 +1,6 @@
 //! This file is to demonstrate THE USAGE of #[derive()]
-
+#![allow(dead_code)]
+#![allow(unused_variables)]
 
 
 

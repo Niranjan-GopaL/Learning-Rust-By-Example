@@ -1,7 +1,9 @@
 //! String types in Rust =>
 //! String  -> String data type 
 //! &str    -> are string slices
-
+//! 
+#![allow(dead_code)]
+#![allow(unused_variables)]
 
 /* KNow these stuff about strings:- 
 

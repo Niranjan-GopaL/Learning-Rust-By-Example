@@ -1,4 +1,7 @@
 //! Matching on structs and enums (in a better way)
+#![allow(dead_code)]
+#![allow(unused_variables)]
+
 
 enum Discount{
     Percent(f64),
