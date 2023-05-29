@@ -66,71 +66,11 @@ fn main() {
         // error, the way error should be handled SHOULD BE DETERMINED BY CALLER
         
         let _user_name = _read_username_from_file();
+        let _user_name = _read_username_from_file__();
+        let _user_name = _read_username_from_file_insane();
         
 }
     
-
-
-
-
-
-
-
-
-// <--------------- awesome version -----------------------------
-
-/// Better version of read_username_from_file()
-fn _read_username_from_file_()->Result<String,io::Error>  {
-    
-        //` ? operator`
-        // used in a function that returns `Result` or `Option` 
-        // (or another type that implements `FromResidual`)
-
-        // `?` means 2 possibilities (actually its just  the replacement for the mannual match we did)
-
-        //  1 -> returns whatever the fn returns 
-        //  2 -> makes the function return with the error it gave 
-        //      (it does not panic rather lets the caller decide what to do with the error)
-        
-        
-        let mut f = File::open("username.txt")?;
-        let mut s = String::new();
-        f.read_to_string(&mut s)?;
-        Ok(s)
-
-
-    }
-    
-    
-    
-    
-// <--------------- INSANE  version -----------------------------
-
-
-/// 2 line _read_username_from_file()
-/// Simplified using chaining function calls
-fn _read_username_from_file__() ->Result<String,io::Error>  {
-    let mut s = String::new();
-    
-    // on looking carefully we understand that we dont really need 
-    // a file variable . we can just chain them together
-    File::open("username.txt")?.read_to_string(&mut s)?;
-    Ok(s)
-}
-
-
-// <--------------- 1 LINE VERSION  version -----------------------------
-
-/// We use std::io::fs::{self} for this
-/// fs has a REALLY useful fucntion called :- 
-/// read_to_string()
-fn _read_username_from_file_insane() ->Result<String,io::Error>  {
-    fs::read_to_string("path/to/your/file.txt")
-}   
-
-//<-----------------------  MIC DROP ----------------------------------
-
-
 
 
 
@@ -171,3 +111,77 @@ fn _read_username_from_file() -> Result<String,io::Error> {
 }
 
 
+
+
+
+
+// <--------------- awesome version -----------------------------
+
+/// Better version of read_username_from_file()
+fn _read_username_from_file_()->Result<String,io::Error>  {
+    
+        //` ? operator`
+        // used in a function that returns `Result` or `Option` 
+        // (or another type that implements `FromResidual`)
+
+        // `?` means 2 possibilities (actually its just  the replacement for the mannual match we did)
+
+        //  1 -> returns whatever the fn returns 
+        //  2 -> makes the function return with the error it gave 
+        //      (it does not panic rather lets the caller decide what to do with the error)
+        
+        
+        let mut f = File::open("username.txt")?;
+        let mut s = String::new();
+        f.read_to_string(&mut s)?;
+        Ok(s)
+        
+    }    
+// --------------------------------------------------------------------------    
+    
+    
+    
+
+
+
+
+
+
+
+
+    
+// <--------------- INSANE  version -----------------------------
+
+
+/// 2 line _read_username_from_file()
+/// Simplified using chaining function calls
+fn _read_username_from_file__() ->Result<String,io::Error>  {
+    let mut s = String::new();
+    
+    // on looking carefully we understand that we dont really need 
+    // a file variable . we can just chain them together
+    File::open("username.txt")?.read_to_string(&mut s)?;
+    Ok(s)
+}    
+// --------------------------------------------------------------------------
+
+
+
+
+
+
+
+// <--------------- 1 LINE VERSION  version -----------------------------
+
+/// We use std::io::fs::{self} for this
+/// fs has a REALLY useful fucntion called :- 
+/// read_to_string()
+fn _read_username_from_file_insane() ->Result<String,io::Error>  {
+    fs::read_to_string("path/to/your/file.txt")
+}       
+
+//<-----------------------  MIC DROP -------------------------------------
+
+
+// NOTICE WE ARE USING read_to_string() that are actually TWO DIFFERENT METHODS
+// They come from different module .ITS A LITTLE CONFUSING SINCE THEY HACE THE SAME NAME
