@@ -62,6 +62,9 @@ fn main() {
 
 
 
+
+
+
 // <--------------- awesome version -----------------------------
 
 /// Better version of read_username_from_file()
@@ -76,19 +79,34 @@ fn _read_username_from_file_()->Result<String,io::Error>  {
         //  1 -> returns whatever the fn returns 
         //  2 -> makes the function return with the error it gave 
         //      (it does not panic rather lets the caller decide what to do with the error)
-
-
+        
+        
         let mut f = File::open("username.txt")?;
         let mut s = String::new();
         f.read_to_string(&mut s)?;
         Ok(s)
 
-        
+
+    }
+    
+    
+    
+    
+// <--------------- INSANE  version -----------------------------
+
+
+/// 2 line _read_username_from_file()
+/// Simplified using chaining function calls
+/// 
+/// 
+fn _read_username_from_file__() ->Result<String,io::Error>  {
+    let mut s = String::new();
+
+    // on looking carefully we understand that we dont really need 
+    // a file variable . we can just chain them together
+    File::open("username.txt")?.read_to_string(&mut s)?;
+    Ok(s)
 }
-
-
-
-
 
 
 
