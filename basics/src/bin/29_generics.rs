@@ -1,11 +1,11 @@
 //! Generics intro
-//! there will be certain levels [[1]] and [[2]] and so on
+//! there will be certain levels [[1]] and [[2]] [[3]]
 
 #![allow(dead_code)]
 #![allow(unused_variables)]
 
 
-// [[2]] --------------------------------------------------------------
+// [[2]] ------------------------------------------------------------------------------
 
 /// largest i32 from Vec<i32>
 fn largest_num(numbers:Vec<i32>) -> i32 {
@@ -21,10 +21,10 @@ fn largest_char(numbers:Vec<char>) -> char {
     for num in numbers {if num > largest {largest = num;}};
     largest
 }
-// ---------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
 
 
-// Generic types
+// Generic types [[3]] ----------------------------------------------------------------
 
 /// This functino can return the largest quantity of from a Vec
 /// be it i32 ,char, u32, String ,etc.
