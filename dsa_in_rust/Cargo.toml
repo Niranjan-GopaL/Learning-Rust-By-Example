@@ -1,5 +1,5 @@
 [package]
-name = "dsa_in_rust"
+name = "v1-sorting"
 version = "0.1.0"
 edition = "2021"
 
