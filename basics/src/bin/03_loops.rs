@@ -10,16 +10,12 @@ fn loops() -> i32 {
         a = a + 1;
     }
 
-
-    
     let mut b = 0;
     // conditional loop
     while b != 5 {
         print!("{b}");
         b = b + 1;
-        
     }
-
 
     fn first_name() -> String {"Niranjan".to_string()}
     fn last_name() -> String {"Gopal".to_string()}
