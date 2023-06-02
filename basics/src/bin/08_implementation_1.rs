@@ -4,15 +4,14 @@ struct Temperature{
 
 
 impl Temperature{
-
-    fn freezing() -> Self{
+    fn _new_freezing() -> Self{
        Self { degree_f: 0.0 }
     }
     
     /* THIS IS EQUALLY VALID. 
         cus "Self" is whatever is the "Name of Impl" 
 
-    fn freezing() -> Temperature{
+    fn _new_freezing() -> Temperature{
         Temperature { degree_f:0.0 }  
     }
 
@@ -24,8 +23,6 @@ impl Temperature{
     }
 }
 
-
-
 fn show_temp(temp:&Temperature){
     println!("{:?}", temp.degree_f)
 }
@@ -35,11 +32,9 @@ fn main(){
     hot.show_temp();  // <-- impl
     show_temp(&hot);   // <-- regular fn
     
-    
-    let cold = Temperature::freezing();  // <--- creating a struct instantce normally
+    let cold = Temperature::_new_freezing();  // <--- creating a struct instantce normally
     cold.show_temp();  // <-- impl
     show_temp(&cold);   // <-- regular fn
-
 
     // both srtuct instaces are available in the main (we only evr let functions and impl borrow)
     println!("{:?}",hot.degree_f);

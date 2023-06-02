@@ -1,4 +1,4 @@
-fn loops() -> i32 {
+fn loops() -> (){
 
     let mut a = 0;
     // inf loop
@@ -22,7 +22,6 @@ fn loops() -> i32 {
 
     println!("{} {}",first_name(),last_name());
 
-    return 0
 }
 
 fn main() {

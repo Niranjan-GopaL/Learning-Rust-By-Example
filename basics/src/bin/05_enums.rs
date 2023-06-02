@@ -1,11 +1,12 @@
-// ENUMERATION
+//! ENUMERATION
+
 fn lesson_2() -> i32 {
     //  ALL POSSIBLE VARIENTS!!!!!!!!! <------- One way of thinkin
     // We created a "data-type-like thing", now varibales of specific 
     // data types belonging to another  broder class of data types can be created
     enum Direction {
-    Up,
-    Down,
+        Up,
+        Down,
         Right,
         Left,
         Front,

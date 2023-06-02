@@ -19,9 +19,9 @@ fn lesson_2() -> i32 {
  */
 
     match some_bool {
-        // true => println!("{some_bool}")  <--- first expression 
+        // true => println!("{some_bool}")  <--- first expression
         true => println!("{some_bool}"),
-        // false => println!("{some_bool}")  <--- second expression 
+        // false => println!("{some_bool}")  <--- second expression
         false => println!("{some_bool}"),
     }
 
@@ -33,7 +33,7 @@ fn lesson_2() -> i32 {
         3 => println!("{some_no}"),
         4 => println!("{some_no}"),
         // anything else will give this
-        _ => println!("Big")
+        _ => println!("Big"),
     }
 
 
@@ -51,7 +51,7 @@ fn lesson_2() -> i32 {
         4 => println!("{some_no}"),
         _ => println!("Big")
 
-        THE SET OF KEYS MUST BE EXHAUSTIVE AND EACH MUST BE UNIQUE !!!!!
+        THE SET OF KEYS MUST BE EXHAUSTIVE and  each must be UNIQUE !!!!!
         THAT MEANS YOU CAN'T DO SOMETHING LIKE :-
 
         match some_no {

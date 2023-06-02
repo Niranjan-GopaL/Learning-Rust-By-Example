@@ -57,7 +57,6 @@ fn structures() {
         rollno:u32,
         _gender:char,
         _is_active:bool}
-    
 
     // std_1 is a first year therefore would have structure of FirstYear
     let std_1 = FirstYear{

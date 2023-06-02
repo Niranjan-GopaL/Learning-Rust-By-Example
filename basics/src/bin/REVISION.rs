@@ -14,7 +14,7 @@ fn is_prime(x: u32) -> bool {
     let mut divisor:u32 = 2;
     loop {
         if x%divisor == 0 {return  false}
-        if divisor == x {break }
+        if divisor == x-1 {break }
         divisor += 1;
     }
     return true;
@@ -33,21 +33,65 @@ fn main(){
     println!("{:?}", a);
 
     for i in a{
-        print!("{:?}", i);
+        println!("{:?}", i);
     }
 
     // here count and num is mutable but n is NOT [LOOK AT IT'S DESCRIPTION]
     let (mut count, n,mut num)  = (0,23,2);
+
     while count != n {
+
         if is_prime(num){
             count += 1;
-            println!("{:?}",num);
+            print!("{:?} ",num);
         }
         num += 1;
+
     }
     // debug trait is not implemented for these. 
     // look at the error message for printing it
     // let t = (1,2,3,4,4,55,12,1,2,3,4,55,12);
     // println!("{:?}", t); 
+
+    // THERE ARE TWO LOOPS => loop{} and 
+    //                      =>  while condition{}
+
+    // to manufacture more data of similar STRUCTURE => struct
+
+    
+    /*     format :- 
+
+        match <> {
+            first expression,
+            second  expression,
+            third  expression,
+            fourth expression,
+        }
+    */
+
+    /*  IMPORTANT THING TO NOTICE
+
+        match some_no {
+        1 => println!("{some_no}"),
+        2 => println!("{some_no}"),
+        3 => println!("{some_no}"),
+        4 => println!("{some_no}"),
+        other => println!("Big")                     //<----------- REMEMBER THIS PRACTISE
+
+        THE SET OF KEYS MUST BE EXHAUSTIVE and  each must be UNIQUE !!!!!
+        THAT MEANS YOU CAN'T DO SOMETHING LIKE :-
+
+        match some_no {
+        some_no > 100 => println!("{some_no}"),
+        some_no = 100 => println!("{some_no}"),
+        some_no < 100 => println!("{some_no}"),
+        }
+
+        eventhough we exhaust all possibilites of some_no , 
+        the left hand side is {F,T,F} and therefore not unique
+
+     */
+
+
 
 }
