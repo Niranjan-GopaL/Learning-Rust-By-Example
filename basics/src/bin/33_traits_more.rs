@@ -7,6 +7,8 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
 
+use std::fmt::{Display, Debug};
+
 
 
 
@@ -103,11 +105,52 @@ fn make_speakbar_able() -> impl SpeakBar {
  
  
  
- // <-------------------------------------------------------------------------
+// <------------------------------------------------------------------------
+ struct Point<T> {
+     x: T,
+     y: T,
+    }
+
+    /// refresh this syntax. Self is WHATEVER name of impl ==> Point<T>
+    impl<T> Point<T>{
+        fn new(x:T,y:T) -> Self {
+        Self 
+        {   x, 
+            y
+        }
+    }
+}
+
+
+impl<T:Display+PartialOrd>  Point<T>{
+
+    /// we are able to both display and compare
+    fn compare_and_display(x:T, y:T) {
+        if x > y{
+            println!("{}", x);
+        }else{
+            println!("{}", y);
+        }
+    }
+}
+
+// <------------------------------------------------------------------------
 
 
 
 
+
+
+
+/*                      We'll see later
+
+WE CAN IMPLEMENTE TRATI FOR TRAITS
+
+                    impl <T: Clone> Debug for T{
+                        // - stuff -
+                    }
+
+ */
 
 
 fn main(){

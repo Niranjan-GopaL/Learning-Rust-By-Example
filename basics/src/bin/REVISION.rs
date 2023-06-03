@@ -2,7 +2,12 @@
 //! 
 //! INLAY HINTS ARE SOO USEFUL FOR LEARNING
 
+
+#![allow(dead_code)]
+#![allow(unused_variables)]
 #![allow(non_snake_case)]
+use std::fmt::Display;
+
 
 fn is_prime(x: u32) -> bool {
     if x<=1 {
@@ -20,6 +25,28 @@ fn is_prime(x: u32) -> bool {
     return true;
 }
 
+
+
+// <--------------------------THIS IS THE EXACT SYNTAX OF IMPL-----------------------------------------------
+struct Point<T> {
+    x: T,
+    y: T,
+}
+        
+
+/// the T near impl DECIDED what all are the characteristics of the generic type that 
+/// this implementation accepts and the TYPE FOR WHICH /"POINT"\it impls, just "accepts it" 
+impl<T:Display+PartialOrd>  Point<T>{
+    /// we are able to both display and compare cuz we accepts only THOSE T which 
+    /// can impl both display and compare
+    fn compare_and_display(x:T, y:T) {
+        if x > y{
+            println!("{}", x);
+        }else{
+            println!("{}", y);
+        }
+    }
+}
 
 
 fn main(){
