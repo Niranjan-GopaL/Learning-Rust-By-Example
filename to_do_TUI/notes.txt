@@ -1,0 +1,30 @@
+termion turned out to be hard cuz of lack of examples
+
+
+            THIS IS SOOOO FUCKING COOL ---------------------------
+
+                    cargo doc 
+                    cargo doc --open
+
+            THIS WILL MAKE DOCUMENTATION THAT YOU WROTE 
+            ( ALONG WITH THE DOC OF dependencies  )
+            OPEN IN "RUST DOC" as. Goddddddddddddddd
+
+
+//// <--------------------Just look at the documentation for ncurses-----------------------------------------------------------> ////
+
+
+
+/// let's fucking go
+fn main() {
+
+    initscr();
+
+    addstr("Hello, world!");
+
+    refresh();
+
+    getch();
+    
+    endwin();
+}
