@@ -142,7 +142,7 @@ impl<T:Display+PartialOrd>  Point<T>{
 
 
 
-/*                      We'll see later
+/*                      We'll see later [ ADV TRAITS ] 
 
 WE CAN IMPLEMENTE TRATI FOR TRAITS
 
