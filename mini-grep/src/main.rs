@@ -12,7 +12,7 @@ fn main() {
     println!("Searching for {}",query);
     println!("in file {}",filepath);
 
-    let contents = fs::read_to_string(filepath).expect("Something went wrong reading a file ...");
+    let contents = fs::read_to_dstring(filepath).expect("Something went wrong reading a file ...");
 
     println!("{}",contents);
 
