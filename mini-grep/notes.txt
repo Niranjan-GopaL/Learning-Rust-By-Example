@@ -1,0 +1,76 @@
+Like fine wine you are quite the rare,
+mature, endearing so filled with quality.
+Packed with layers of complexity and such finesse;
+a stunning delicacy,
+An asset worth investment
+Investment of my time and being
+
+For the longest of time,
+Seemingly so since we were acquainted 
+Our friendship, maturing
+and each day, always finer than before
+
+
+ Ours is a forever at a magnitude,
+Which can never amount to anything
+With similarly refined taste
+as pure and precious as gold
+
+
+Our brand of love unmatched by anyone else
+I will always crave to be by your side 
+Just as i am hooked to you like glue
+The possibility to sever the ties that bind us is unimaginable
+
+I could be in pain or in distress but when you are around my somber mood turns to delight. In a moment , I am grinning like a fool who knew no pain
+I see joy and feel at peace whenever you are around
+
+Nothing can compare to the worth you possess.
+I hold you in the same regard with the deepest love and affection 
+I promise to never leave and always stay true to what I feel
+
+
+That deep, lingering taste of your essence is something I will always need.
+you are my forever
+my fine wine 
+
+to mubanga loongo
+
+
+
+<------------------------------------------------------------------------------------------>
+
+
+
+
+First stage ----------------------------------------------------------------------
+
+//! minigrep impl
+use std::{env,fs};
+
+
+
+fn main() {
+    let args:Vec<String> = env::args().collect();
+    
+    let query = &args[1];
+    let filepath = &args[2];
+    
+    println!("Searching for {}",query);
+    println!("in file {}",filepath);
+
+    let contents = fs::read_to_string(filepath).expect("Something went wrong reading a file ...");
+
+    println!("{}",contents);
+
+}
+
+--------------------------------------------------------------------------------
+
+
+
+
+- Extracting logic to /bin, 
+- having a library to handle all the util functions, 
+- Centralised error handling, 
+- main should only need to parse and call functions
