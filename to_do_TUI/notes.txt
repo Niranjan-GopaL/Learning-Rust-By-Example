@@ -50,3 +50,61 @@ fn main() {
 }
 
 //// <-----------------------------------------------------------------------------------------------------------> ////
+
+
+
+
+
+
+
+//// <------------------------------ Now you can render to_do in the screen -----------------------------------------------------------------------------> ////
+
+
+
+    let mut to_do = vec![
+        "execute the plan",
+        "I am happy",
+        "Make tea",
+        "Learn Cpp",
+        "Learn more on rust",
+        "Learn more twcss",
+        "Learn more MUI",
+    ];
+
+    
+    
+    while !quit {
+        
+        for (row,todo)  in to_do.iter().enumerate() {  // <--------- search wtf is this
+            mv(row as i32, 0);
+            addstr(*&todo);
+        }
+        
+        refresh();
+        
+        let key = getch();
+        match key as u8 as char {
+            'q' => quit = true,
+            other => println!("{}",other)
+        }
+    }
+
+//// <-----------------------------------------------------------------------------------------------------------> ////
+
+
+
+
+
+//// <----------------------------------How to move up and down and "select to_do" -------------------------------------------------------------------------> ////
+
+Basically going up and down using cursor is basically :-
+
+                    Rendering the "row that cursor is supposed to be in" in diff way
+                    maybe different color
+
+
+
+
+
+
+//// <-----------------------------------------------------------------------------------------------------------> ////

@@ -23,6 +23,8 @@ fn main() {
         "Learn more MUI",
     ];
 
+    // INDEX at which cursor is there̥
+    let to_do_curr:usize= 0;
     
     
     while !quit {
