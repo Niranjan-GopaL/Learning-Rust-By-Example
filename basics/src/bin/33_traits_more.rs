@@ -6,12 +6,13 @@
 
 #![allow(dead_code)]
 #![allow(unused_variables)]
-
+#![allow(non_snake_case)]
 use std::fmt::{Display, Debug};
 
 
 
 
+// <-------------------------------------------------------------------------
 struct Foo1{
     bar1: String,
     bar2: String,
@@ -39,17 +40,24 @@ impl SpeakBar for  Foo2 {
 }
 
 
-
-
-
-
-
 /// Traits need UpperCamelCase
 trait SpeakBar{
     fn speak_bar_trait(&self) -> String{
      String::from("THI IS THE DEFAULT IMPL")
     }
 }
+// <-------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,6 +81,15 @@ fn notify_2<T:SpeakBar>(param:T)
 
 
 
+
+
+
+
+
+
+
+
+
 // <-------------------------------------------------------------------------
 
 fn func1<T:>(param1:T, param2:T) 
@@ -90,8 +107,21 @@ fn func2(param1:&impl SpeakBar, param2:&impl SpeakBar)
  // <-------------------------------------------------------------------------
  
  
+
+
+
+
+
+
  
  
+
+
+
+
+
+
+
  // <-------------------------------------------------------------------------
 
 /// Returns some type that has a specific trait
@@ -103,6 +133,23 @@ fn make_speakbar_able() -> impl SpeakBar {
     }
 }
  
+// <------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  
 // <------------------------------------------------------------------------
@@ -141,6 +188,29 @@ impl<T:Display+PartialOrd>  Point<T>{
 
 
 
+// <-------------------------------- where clause improve Readablity ----------------------------------------------------
+
+fn some_function<T:Debug+Clone, U:Copy+PartialOrd>(param1:T, param2:U) 
+{
+    // -- snip --
+}
+
+
+fn some_function_BETTER_READABLE<T,U>(param1:T, param2:U)
+        where   T: Debug+Clone,
+                U:Copy+PartialOrd
+{
+    // -- snip --
+    // -- snip --
+    // -- snip --
+}
+
+// <----------------------------------------------------------------------------------------------------------------
+                
+
+
+
+
 
 /*                      We'll see later [ ADV TRAITS ] 
 
@@ -151,6 +221,26 @@ WE CAN IMPLEMENTE TRATI FOR TRAITS
                     }
 
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 fn main(){
