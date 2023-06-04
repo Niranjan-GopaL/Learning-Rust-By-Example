@@ -1,5 +1,5 @@
 //! minigrep impl
-//! 
+//! Each function ==> ONE RESPONSIBILITY
 
 use std::{env,fs};
 
