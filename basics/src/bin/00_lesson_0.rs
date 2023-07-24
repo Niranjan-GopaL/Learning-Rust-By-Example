@@ -1,8 +1,10 @@
+#![allow(dead_code)]
+#![allow(dead_code)]
+#![allow(unused_variables)]
+#![allow(non_snake_case)]
+
+
 use std::io;
-
-// #![allow(dead_code)]
-
-
 
 
 pub fn lesson_0() {
@@ -12,14 +14,11 @@ pub fn lesson_0() {
     io::stdin().read_line(&mut input).expect("Failed to read input");
 
     // Trim whitespace and convert to the desired type
-    let value: u32 = input.trim().parse().expect("Invalid input");
+    let value:i32 = input.trim().parse().expect("Invalid input");
 
     println!("{}", value);
 
-
-
-
-
+    
 
     // This won't compile cuz compiler things enigma could be 
     //uninitialised since it is in an if statement
@@ -51,11 +50,22 @@ pub fn lesson_0() {
 
     // t.0 t.1 t.2 etc
 
-    add(1, 2);
+
+
+    // FIGURE OUT THE ERROR HERE ----------------------------------------------------------
+    let mut buf = String::new();
+
+    io::stdin().read_line(&mut buf).expect("Failed to read `a`");
+    let a:i32 = buf.trim().parse().expect("Invalid type for a, expected int");
+
+    io::stdin().read_line(&mut buf).expect("Failed to read `b`");
+    let b:i32 = buf.trim().parse().expect("Invalid type for b, expected int");
+
+    println!("{:?}",add(a, b));
 
     
     /* Multi line comments
-
+    
      */
 
 }   

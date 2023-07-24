@@ -67,10 +67,9 @@ fn the_2_types_of_ITERATOR_METHODES(){
     let result:u32 = v1_iter.sum();
     assert_eq!(result,15);
 
-    v1_iter.map(|x|x + 1);
+    // v1_iter.map(|x|x + 1);????
 
 }
-
 
 
 fn main()
